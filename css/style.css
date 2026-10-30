@@ -1,0 +1,383 @@
+
+    /* Global Styles & Variables */
+    :root {
+      --bg-dark: #0f1110;
+      --card-bg: #161817;
+      --card-border: #242725;
+      --accent-green: #b2f348;
+      --accent-green-dark: #8ecb2f;
+      --text-main: #ffffff;
+      --text-muted: #8e9490;
+      --font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #1e3314;
+      color: var(--text-main);
+      font-family: var(--font-family);
+      padding: 24px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .dashboard-container {
+      width: 100%;
+      max-width: 1100px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    /* Top Navigation */
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 12px 24px;
+    }
+
+    .brand-logo {
+      font-size: 1.25rem;
+      font-weight: 900;
+      letter-spacing: 1px;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .brand-logo span {
+      color: #000;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.9rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 8px;
+    }
+
+    .nav-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.875rem;
+      padding: 8px 16px;
+      transition: all 0.2s;
+    }
+
+   .nav-link:hover{
+    border-bottom: 1px solid white;
+   }
+
+    /* Hero Section Header */
+    .dashboard-header {
+      margin-top: 10px;
+    }
+
+    .subtitle-date {
+      color: #d86835;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .main-title {
+      font-size: 2.2rem;
+      font-weight: 900;
+      letter-spacing: 0.5px;
+      margin: 4px 0;
+    }
+
+    .welcome-text {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* Feature Banner */
+    .hero-banner {
+      position: relative;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), 
+                  url('/Assets/images/heroimg.png') center/cover;
+      border-radius: 16px;
+      padding: 40px 32px;
+      border: 1px solid var(--card-border);
+    }
+
+    .banner-tag {
+      color: #d86835;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .banner-title {
+      font-size: 2rem;
+      font-weight: 900;
+      line-height: 1.1;
+      margin: 8px 0;
+    }
+
+    .banner-link {
+      color: var(--accent-green);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    /* Grid Layouts */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    /* Stat Cards */
+    .stat-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .stat-header {
+      display: flex;
+      justify-content: space-between;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+    }
+
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin: 10px 0 4px;
+    }
+
+    .stat-footer {
+      color: var(--text-muted);
+      font-size: 0.75rem;
+    }
+
+    /* Activity Cards */
+    .activity-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-img-container {
+      position: relative;
+      height: 120px;
+    }
+
+    .card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .badge-sport {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: rgba(0,0,0,0.6);
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      backdrop-filter: blur(4px);
+    }
+
+    .badge-status {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      padding: 4px 8px;
+      border-radius: 10px;
+      font-size: 0.65rem;
+      font-weight: 700;
+    }
+
+    .badge-status.active {
+      background: #1e3314;
+      color: var(--accent-green);
+      border: 1px solid var(--accent-green);
+    }
+
+    .badge-status.completed {
+      background: #2a2a2a;
+      color: #a0a0a0;
+    }
+
+    .card-body {
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .activity-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+
+    .activity-subtitle {
+      color: var(--text-muted);
+      font-size: 0.75rem;
+    }
+
+    /* Progress Bar */
+    .progress-container {
+      margin-top: 4px;
+    }
+
+    .progress-info {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .progress-bar-bg {
+      width: 100%;
+      height: 6px;
+      background: #282c29;
+      border-radius: 3px;
+      overflow: hidden;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      background: var(--accent-green);
+      border-radius: 3px;
+    }
+
+    /* Card Actions */
+    .card-actions {
+      display: flex;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .btn {
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      cursor: pointer;
+      border: none;
+      flex: 1;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background-color: var(--accent-green);
+      color: #0d1203;
+    }
+
+    .btn-secondary {
+      background-color: #202422;
+      color: var(--text-main);
+      border: 1px solid var(--card-border);
+    }
+
+    /* Leaderboard / Frontrunners Section */
+    .leaderboard-section {
+      background-color: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 24px;
+    }
+
+    .section-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+
+    /* Podium Layout */
+    .podium {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      gap: 16px;
+      height: 160px;
+    }
+
+    .podium-step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 90px;
+    }
+
+    .podium-info {
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    .runner-name {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .runner-score {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--accent-green);
+    }
+
+    .podium-block {
+      width: 100%;
+      border-radius: 6px 6px 0 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.2rem;
+    }
+
+    .rank-1 .podium-block {
+      height: 100px;
+      background-color: #233714;
+      color: var(--accent-green);
+      border: 1px solid var(--accent-green);
+    }
+
+    .rank-2 .podium-block {
+      height: 70px;
+      background-color: #1d211f;
+      color: var(--text-muted);
+    }
+
+    .rank-3 .podium-block {
+      height: 50px;
+      background-color: #1d211f;
+      color: var(--text-muted);
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+      .navbar {
+        flex-direction: column;
+        gap: 12px;
+      }
+    }
