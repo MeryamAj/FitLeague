@@ -5,7 +5,7 @@ const challenges = [
     "sport": "Course à pied",
     "description": "Courir une distance totale de 50 km avant la fin du mois.",
     "goalValue": 50,
-    "deadline": "2026-11-30",
+    "deadline": "2027-11-30",
     "status": "inactif",
     "imageUrl": "Assets/images/running.png"
   },
@@ -15,8 +15,8 @@ const challenges = [
     "sport": "Musculation",
     "description": "Réaliser 100 pompes chaque jour pendant une semaine complète.",
     "goalValue": 700,
-    "deadline": "2026-11-05",
-    "status": "actif",
+    "deadline": "2027-11-05",
+    "status": "Active",
     "imageUrl": "assets/images/musculation.png"
   },
   {
@@ -25,8 +25,8 @@ const challenges = [
     "sport": "Cyclisme",
     "description": "Parcourir 150 kilomètres à vélo sur des parcours en extérieur.",
     "goalValue": 150,
-    "deadline": "2026-11-25",
-    "status": "actif",
+    "deadline": "2027-11-25",
+    "status": "Active",
     "imageUrl": "assets/images/cyclisme.png"
   },
   {
@@ -35,7 +35,7 @@ const challenges = [
     "sport": "Yoga",
     "description": "Pratiquer 20 minutes de séances de yoga réparateur chaque matin.",
     "goalValue": 300,
-    "deadline": "2026-11-30",
+    "deadline": "2027-11-30",
     "status": "inactif",
     "imageUrl": "assets/images/yoga.png"
   },
@@ -45,8 +45,8 @@ const challenges = [
     "sport": "Natation",
     "description": "Nager une distance cumulée de 10 kilomètres en piscine.",
     "goalValue": 10,
-    "deadline": "2026-11-20",
-    "status": "actif",
+    "deadline": "2027-11-20",
+    "status": "Active",
     "imageUrl": "assets/images/natation.png"
   },
   {
@@ -55,8 +55,8 @@ const challenges = [
     "sport": "Fitness",
     "description": "Compléter 10 routines d'entraînements à haute intensité (HIIT).",
     "goalValue": 10,
-    "deadline": "2026-11-15",
-    "status": "actif",
+    "deadline": "2027-11-15",
+    "status": "Active",
     "imageUrl": "assets/images/fitness.png"
   },
   {
@@ -66,7 +66,7 @@ const challenges = [
     "description": "Maintenir une moyenne de 10 000 pas par jour pendant deux semaines.",
     "goalValue": 140000,
     "deadline": "2026-11-14",
-    "status": "inactif",
+    "status": "Completed",
     "imageUrl": "assets/images/marche.png"
   },
   {
@@ -75,8 +75,8 @@ const challenges = [
     "sport": "Musculation",
     "description": "Accumuler un total de 500 répétitions de squats.",
     "goalValue": 500,
-    "deadline": "2026-11-28",
-    "status": "actif",
+    "deadline": "2027-11-28",
+    "status": "Active",
     "imageUrl": "assets/images/musculation.png"
   },
   {
@@ -85,8 +85,8 @@ const challenges = [
     "sport": "Course à pied",
     "description": "Courir 100 km pour se préparer pour le prochain semi-marathon.",
     "goalValue": 100,
-    "deadline": "2026-12-05",
-    "status": "actif",
+    "deadline": "2027-12-05",
+    "status": "Active",
     "imageUrl": "assets/images/running.png"
   },
   {
@@ -95,8 +95,8 @@ const challenges = [
     "sport": "Fitness",
     "description": "Accumuler un temps total de 60 minutes de planche/gainage.",
     "goalValue": 60,
-    "deadline": "2026-11-18",
-    "status": "inactif",
+    "deadline": "2027-11-18",
+    "status": "Completed",
     "imageUrl": "assets/images/fitness.png"
   },
   {
@@ -105,8 +105,8 @@ const challenges = [
     "sport": "Randonnée",
     "description": "Franchir un dénivelé positif total de 2000 mètres en montagne.",
     "goalValue": 2000,
-    "deadline": "2026-11-22",
-    "status": "actif",
+    "deadline": "2027-11-22",
+    "status": "Active",
     "imageUrl": "assets/images/randonnee.png"
   },
   {
@@ -115,8 +115,8 @@ const challenges = [
     "sport": "Course à pied",
     "description": "Compléter 5 sessions individuelles de 5km de course rapide.",
     "goalValue": 5,
-    "deadline": "2026-11-25",
-    "status": "actif",
+    "deadline": "2027-01-25",
+    "status": "Active",
     "imageUrl": "assets/images/running.png"
   },
   {
@@ -125,8 +125,8 @@ const challenges = [
     "sport": "Musculation",
     "description": "Effectuer 400 tractions au cours du mois.",
     "goalValue": 400,
-    "deadline": "2026-11-30",
-    "status": "inactif",
+    "deadline": "2026-08-30",
+    "status": "Completed",
     "imageUrl": "assets/images/musculation.png"
   },
   {
@@ -135,8 +135,8 @@ const challenges = [
     "sport": "Yoga",
     "description": "Consacrer 180 minutes aux étirements et au travail de mobilité.",
     "goalValue": 180,
-    "deadline": "2026-11-20",
-    "status": "actif",
+    "deadline": "2027-01-20",
+    "status": "Active",
     "imageUrl": "assets/images/yoga.png"
   },
   {
@@ -145,8 +145,8 @@ const challenges = [
     "sport": "Course à pied",
     "description": "Réaliser 15 sessions de sprints fractionnés à haute intensité.",
     "goalValue": 15,
-    "deadline": "2026-11-16",
-    "status": "actif",
+    "deadline": "2027-05-16",
+    "status": "Active",
     "imageUrl": "assets/images/running.png"
   },
   {
@@ -156,7 +156,7 @@ const challenges = [
     "description": "Compléter 12 entraînements complets en circuit pour tout le corps.",
     "goalValue": 12,
     "deadline": "2026-11-26",
-    "status": "inactif",
+    "status": "Completed",
     "imageUrl": "assets/images/fitness.png"
   },
   {
@@ -166,8 +166,8 @@ const challenges = [
     "sport": "Cyclisme",
     "description": "Parcourir 80 km à vélo sur des pistes et routes urbaines.",
     "goalValue": 80,
-    "deadline": "2026-11-19",
-    "status": "actif",
+    "deadline": "2027-02-19",
+    "status": "Active",
     "imageUrl": "assets/images/cyclisme.png"
   },
   {
@@ -176,8 +176,8 @@ const challenges = [
     "sport": "Fitness",
     "description": "Faire 1000 abdominaux au total sur une période de deux semaines.",
     "goalValue": 1000,
-    "deadline": "2026-11-12",
-    "status": "actif",
+    "deadline": "2027-04-12",
+    "status": "Active",
     "imageUrl": "assets/images/fitness.png"
   },
   {
@@ -187,7 +187,7 @@ const challenges = [
     "description": "Marcher une distance cumulée de 75 km.",
     "goalValue": 75,
     "deadline": "2026-11-29",
-    "status": "inactif",
+    "status": "Completed",
     "imageUrl": "assets/images/marche.png"
   },
   {
@@ -196,8 +196,8 @@ const challenges = [
     "sport": "Musculation",
     "description": "Compléter 20 séances intensives de travail de force basique.",
     "goalValue": 20,
-    "deadline": "2026-11-30",
-    "status": "actif",
+    "deadline": "2027-08-30",
+    "status": "Active",
     "imageUrl": "assets/images/musculation.png"
   },
   {
@@ -206,8 +206,8 @@ const challenges = [
     "sport": "Natation",
     "description": "Compléter 5 000 mètres au total de nage dynamique.",
     "goalValue": 5000,
-    "deadline": "2026-11-24",
-    "status": "actif",
+    "deadline": "2026-12-24",
+    "status": "Active",
     "imageUrl": "assets/images/natation.png"
   },
   {
@@ -217,7 +217,7 @@ const challenges = [
     "description": "Parcourir 30 km en petites sessions avant 8h00 du matin.",
     "goalValue": 30,
     "deadline": "2026-11-15",
-    "status": "inactif",
+    "status": "Completed",
     "imageUrl": "assets/images/running.png"
   },
   {
@@ -226,8 +226,8 @@ const challenges = [
     "sport": "Yoga",
     "description": "Suivre et réussir 10 séances complètes de Pilates centrées sur le buste.",
     "goalValue": 10,
-    "deadline": "2026-11-21",
-    "status": "actif",
+    "deadline": "2027-12-04",
+    "status": "Active",
     "imageUrl": "assets/images/yoga.png"
   },
   {
@@ -236,8 +236,8 @@ const challenges = [
     "sport": "Cyclisme",
     "description": "Grimper 10 côtes ou cols exigeants à vélo.",
     "goalValue": 10,
-    "deadline": "2026-11-27",
-    "status": "actif",
+    "deadline": "2026-12-27",
+    "status": "Active",
     "imageUrl": "assets/images/cyclisme.png"
   },
   {
@@ -247,7 +247,7 @@ const challenges = [
     "description": "Réaliser un total de 250 burpees au cours d'une semaine.",
     "goalValue": 250,
     "deadline": "2026-11-10",
-    "status": "inactif",
+    "status": "Completed",
     "imageUrl": "assets/images/fitness.png"
   },
   {
@@ -257,7 +257,7 @@ const challenges = [
     "description": "Montez l'équivalent de 50 étages ou volées d'escaliers.",
     "goalValue": 50,
     "deadline": "2026-11-22",
-    "status": "actif",
+    "status": "Completed",
     "imageUrl": "assets/images/marche.png"
   },
   {
@@ -266,8 +266,8 @@ const challenges = [
     "sport": "Musculation",
     "description": "Réaliser 300 répétitions de développé militaire aux haltères.",
     "goalValue": 300,
-    "deadline": "2026-11-25",
-    "status": "actif",
+    "deadline": "2026-12-25",
+    "status": "Active",
     "imageUrl": "assets/images/musculation.png"
   }
   
