@@ -22,33 +22,10 @@
 // completedchaltxt.textContent = ` ${completedchalenge} Completed`;
 
 
-const challenge_articles =document.querySelector("#challengsection");
-challenges.forEach((idchal) => {
-challenge_articles.innerHTML+= ` 
-<article class="activity-card">
-          <div class="card-img-container">
-          <img src="${idchal.imageUrl}" alt="${idchal.title}" class="card-img">
-        </div>
-        <div class="card-body">
-          <h3 class="activity-title">${idchal.title}</h3>
-          <div class="activity-subtitle">${idchal.description}</div>
-          <div class="progress-container">
-            <div class="progress-info">
-              <span> • ${idchal.status}</span>
-            </div>
-          </div>
-          <div class="card-actions">
-            <button class="btn btn-primary">View challenge</button>
-            <button class="btn btn-secondary"> Edit</button>
-          </div>
-        </div> 
-        </article>`
-});
-
 
 // const challengearticles = document.querySelector("#challengearticle");
 // for (let i = 5; i < 8; i++) {
-//    challengearticles.innerHTML+= ` 
+//    challengearticles.innerHTML+= `
 //     <article class="activity-card">
 //           <div class="card-img-container">
 //           <img src="${challenges[i].imageUrl}" alt="${challenges[i].title}" class="card-img">
@@ -65,8 +42,165 @@ challenge_articles.innerHTML+= `
 //             <button class="btn btn-primary">View challenge</button>
 //             <button class="btn btn-secondary"> Edit</button>
 //           </div>
-//         </div> 
+//         </div>
 //         </article>`
 //  }
+
+
+
+const challenge_articles = document.querySelector("#challengsection");
+
+challenges.forEach((idchal) => {
+  challenge_articles.innerHTML += ` 
+<article class="activity-card">
+          <div class="card-img-container">
+          <img src="${idchal.imageUrl}" alt="${idchal.title}" class="card-img">
+        </div>
+        <div class="card-body"> 
+        <h3 class="activity-subtitle">Challenge Id : ${idchal.id}</h3>
+          <h3 class="activity-title">${idchal.title}</h3>
+          <div class="activity-subtitle">${idchal.description}</div>
+          <div class="activity-subtitle">Deadline : ${idchal.deadline}</div>
+          <div class="progress-container">
+            <div class="progress-info">
+              <span> • ${idchal.status}</span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <button class="btn btn-primary" id="" data-idchalview="${idchal.id}>View challenge</button>
+            <button class="btn btn-primary" id="" data-idchaledit="${idchal.id}>Edit challenge</button>
+            <button class="btn btn-primary" id="" data-idchaldel="${idchal.id}>Delete challenge</button>
+          </div>
+        </div> 
+        </article>`
+});
+
+
+
+
+const searchChallengeName = document.getElementById("searchChalinput");
+const searchChallengeBtn = document.getElementById("searchChalBtn");
+const spanNotfound = document.getElementById("searchnotfound");
+
+
+searchChallengeBtn.addEventListener("click", function (e) {
+  let searchValue = searchChallengeName.value;
+  let chalengesearched = challenges.filter(chal => chal.id == searchValue);
+
+  challengsection.innerHTML = "";
+
+  if (chalengesearched.length === 0) {
+    spanNotfound.textContent = "No challenges found";
+    return;
+  }
+
+  for (i = 0; i < chalengesearched.length; i++) {
+    challenge_articles.innerHTML += ` 
+        <article class="activity-card">
+          <div class="card-img-container">
+          <img src="${chalengesearched[i].imageUrl}" alt="${chalengesearched[i].title}" class="card-img">
+        </div>
+        <div class="card-body"> 
+        <h3 class="activity-subtitle">Challenge Id : ${chalengesearched[i].id}</h3>
+          <h3 class="activity-title">${chalengesearched[i].title}</h3>
+          <div class="activity-subtitle">${chalengesearched[i].description}</div>
+          <div class="activity-subtitle">Deadline : ${chalengesearched[i].deadline}</div>
+          <div class="progress-container">
+            <div class="progress-info">
+              <span> • ${chalengesearched[i].status}</span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <button class="btn btn-primary">View challenge</button>
+
+          </div>
+        </div> 
+        </article>`
+  }
+});
+
+
+
+
+
+const challengecreatebtn = document.getElementById("challengecreate");
+const createform = document.getElementById("createchallenge");
+const challengeupdatebtn = document.getElementById("challengeupdate");
+const updateform = document.getElementById("updatechallenge");
+const challengedeletebtn = document.getElementById("challengedelete");
+const deleteform = document.getElementById("deletechallenge");
+
+const createcloseBtn = document.getElementById("createclosebtn");
+const updatecloseBtn = document.getElementById("updateclosebtn");
+const deletecloseBtn = document.getElementById("deleteclosebtn");
+
+challengecreatebtn.addEventListener("click", () => {
+  createform.style.display = "flex";
+});
+createcloseBtn.addEventListener("click", () => {
+  createform.style.display = "none";
+});
+
+
+
+challengeupdatebtn.addEventListener("click", () => {
+  updateform.style.display = "flex";
+});
+updatecloseBtn.addEventListener("click", () => {
+  updateform.style.display = "none";
+});
+
+
+
+challengedeletebtn.addEventListener("click", () => {
+  deleteform.style.display = "flex";
+});
+deletecloseBtn.addEventListener("click", () => {
+  deleteform.style.display = "none";
+});
+
+
+const createchallengeid = document.getElementById("createchallengeid");
+const createchallengetitle = document.getElementById("createchallengetitle");
+const createchallengesport = document.getElementById("createchallengesport");
+const createchallengedescription = document.getElementById("createchallengedescription");
+const createchallengeobjectif = document.getElementById("createchallengeobjectif");
+const createchallengedate = document.getElementById("createchallengedate");
+const createchallengestatus = document.getElementById("createchallengestatus");
+
+
+
+const createchallengebtn = document.getElementById("createchallengebtn");
+let msgs = document.getElementById("createchallengespan")
+
+createchallengebtn.addEventListener("click", function (e) {
+
+  let chall = challenges.filter(chall => chall.id == createchallengeid);
+  // let test = [];
+
+  // e.preventDefault();
+
+  // // if (chall != 0) {
+
+  // // }
+  // // else {
+  // //   msg.textContent = "Id Already Token";
+  // // }
+  
+  // test.push({
+  //   "id": createchallengeid.value,
+  //   title: createchallengetitle.value,
+  //   sport: createchallengesport.value,
+  //   description: createchallengedescription.value,
+  //   goalValue: createchallengeobjectif.value,
+  //   deadline: createchallengedate.value,
+  //   status: createchallengestatus.value,
+  //   imageUrl: "Assets/images/running.png"
+  // })
+  // console.log(test)
+  // msgs.textContent = "Id Already Token";
+
+});
+
 
 
