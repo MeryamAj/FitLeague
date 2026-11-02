@@ -25,9 +25,12 @@
       display: flex;
       justify-content: center;
     }
+<<<<<<< HEAD
     .nav-link:hover{
     border-bottom: 1px solid white;
    }
+=======
+>>>>>>> 8a24428c19d6c5628ca8e70f9292878c3518ce99
 
     .dashboard-container {
       width: 100%;
@@ -78,10 +81,16 @@
       transition: all 0.2s;
     }
 
+<<<<<<< HEAD
     .nav-link.active {
       color: white;
       border-bottom: 1px solid #f3f6f2;
     }
+=======
+   .nav-link:hover{
+    border-bottom: 1px solid white;
+   }
+>>>>>>> 8a24428c19d6c5628ca8e70f9292878c3518ce99
 
     /* Hero Section Header */
     .dashboard-header {
@@ -375,6 +384,7 @@
       color: var(--text-muted);
     }
 
+<<<<<<< HEAD
      /* particepent */
     .tabl{
       background-color: var(--card-bg);
@@ -448,6 +458,8 @@
 
 
 
+=======
+>>>>>>> 8a24428c19d6c5628ca8e70f9292878c3518ce99
     /* Responsive Adjustments */
     @media (max-width: 768px) {
       .grid-3 {
