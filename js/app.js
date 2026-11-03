@@ -67,9 +67,8 @@ challenges.forEach((idchal) => {
             </div>
           </div>
           <div class="card-actions">
-            <button class="btn btn-primary" id="" data-idchalview="${idchal.id}>View challenge</button>
-            <button class="btn btn-primary" id="" data-idchaledit="${idchal.id}>Edit challenge</button>
-            <button class="btn btn-primary" id="" data-idchaldel="${idchal.id}>Delete challenge</button>
+            <button class="btn btn-primary challengeupdate" id="" >Edit</button>
+            <button class="btn btn-primary challengedelete" id="" >Delete</button>
           </div>
         </div> 
         </article>`
@@ -90,7 +89,7 @@ searchChallengeBtn.addEventListener("click", function (e) {
   challengsection.innerHTML = "";
 
   if (chalengesearched.length === 0) {
-    spanNotfound.textContent = "No challenges found";
+    spanNotfound.textContent = "No challenge found";
     return;
   }
 
@@ -111,7 +110,8 @@ searchChallengeBtn.addEventListener("click", function (e) {
             </div>
           </div>
           <div class="card-actions">
-            <button class="btn btn-primary">View challenge</button>
+            <button class="btn btn-primary">Edit</button>
+            <button class="btn btn-primary">Delete</button>
 
           </div>
         </div> 
@@ -125,9 +125,9 @@ searchChallengeBtn.addEventListener("click", function (e) {
 
 const challengecreatebtn = document.getElementById("challengecreate");
 const createform = document.getElementById("createchallenge");
-const challengeupdatebtn = document.getElementById("challengeupdate");
+const challengeupdatebtn = document.querySelectorAll(".challengeupdate");
 const updateform = document.getElementById("updatechallenge");
-const challengedeletebtn = document.getElementById("challengedelete");
+const challengedeletebtn = document.querySelectorAll(".challengedelete");
 const deleteform = document.getElementById("deletechallenge");
 
 const createcloseBtn = document.getElementById("createclosebtn");
@@ -142,22 +142,27 @@ createcloseBtn.addEventListener("click", () => {
 });
 
 
+challengeupdatebtn.forEach((el) => {
 
-challengeupdatebtn.addEventListener("click", () => {
-  updateform.style.display = "flex";
-});
-updatecloseBtn.addEventListener("click", () => {
-  updateform.style.display = "none";
-});
+  el.addEventListener("click", () => {
+    updateform.style.display = "flex";
+  });
+  updatecloseBtn.addEventListener("click", () => {
+    updateform.style.display = "none";
+  });
+})
 
 
 
-challengedeletebtn.addEventListener("click", () => {
-  deleteform.style.display = "flex";
+challengedeletebtn.forEach((ch) => {
+  ch.addEventListener("click", () => {
+    deleteform.style.display = "flex";
+  });
+  deletecloseBtn.addEventListener("click", () => {
+    deleteform.style.display = "none";
+  });
 });
-deletecloseBtn.addEventListener("click", () => {
-  deleteform.style.display = "none";
-});
+
 
 
 const createchallengeid = document.getElementById("createchallengeid");
@@ -171,34 +176,32 @@ const createchallengestatus = document.getElementById("createchallengestatus");
 
 
 const createchallengebtn = document.getElementById("createchallengebtn");
-let msgs = document.getElementById("createchallengespan")
+
 
 createchallengebtn.addEventListener("click", function (e) {
-
+  let msgs = document.getElementById("createchallengespan")
   let chall = challenges.filter(chall => chall.id == createchallengeid);
   // let test = [];
 
-  // e.preventDefault();
+  e.preventDefault();
 
-  // // if (chall != 0) {
+  if (chall != 0) {
 
-  // // }
-  // // else {
-  // //   msg.textContent = "Id Already Token";
-  // // }
-  
-  // test.push({
-  //   "id": createchallengeid.value,
-  //   title: createchallengetitle.value,
-  //   sport: createchallengesport.value,
-  //   description: createchallengedescription.value,
-  //   goalValue: createchallengeobjectif.value,
-  //   deadline: createchallengedate.value,
-  //   status: createchallengestatus.value,
-  //   imageUrl: "Assets/images/running.png"
-  // })
-  // console.log(test)
-  // msgs.textContent = "Id Already Token";
+    challenges.push({
+      "id": createchallengeid.value,
+      "title": createchallengetitle.value,
+      "sport": createchallengesport.value,
+      "description": createchallengedescription.value,
+      "goalValue": createchallengeobjectif.value,
+      "deadline": createchallengedate.value,
+      "status": createchallengestatus.value,
+      "imageUrl": "Assets/images/running.png"
+    })
+  }
+  else {
+    msgs.textContent = "Id Already Token";
+  }
+
 
 });
 
