@@ -277,21 +277,16 @@ const challenges = [
 const participants = [
   {
     "id": "pa_1761512400000",
-    "name": "Zakaria Afifi",
+    "name": "ayman",
     "pseudo": "zakFit",
-    "challengeIds": [
-      "ch_101",
-      "ch_125"
-    ]
+    "challengeIds": "ch_101"
+    
   },
   {
     "id": "pa_1761512400001",
     "name": "Amine Benali",
     "pseudo": "amine_runner",
-    "challengeIds": [
-      "ch_102",
-      "ch_115"
-    ]
+    "challengeIds": "ch_102"
   },
   {
     "id": "pa_1761512400002",
@@ -306,8 +301,7 @@ const participants = [
     "name": "Ahmed El Amrani",
     "pseudo": "ahmed_power",
     "challengeIds": [
-      "ch_104",
-      "ch_120"
+      "ch_104"
     ]
   },
   {
