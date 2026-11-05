@@ -16,14 +16,14 @@
   padding: 0;
 }
 
-body {
-  background-color: #1e3314;
-  color: var(--text-main);
-  font-family: var(--font-family);
-  padding: 24px;
-  display: flex;
-  justify-content: center;
-}
+    body {
+      background-color: #1e3314;
+      color: var(--text-main);
+      font-family: var(--font-family);
+      padding: 24px;
+      display: flex;
+      justify-content: center;
+    }
 
 .dashboard-container {
   width: 100%;
@@ -73,9 +73,9 @@ body {
   transition: all 0.2s;
 }
 
-.nav-link:hover {
-  border-bottom: 1px solid white;
-}
+   .nav-link:hover{
+    border-bottom: 1px solid white;
+   }
 
 
 .dashboard-header {
@@ -264,7 +264,7 @@ body {
   cursor: pointer;
   border: none;
   flex: 1;
-  text-align: center;
+  text-align: center; 
 }
 
 .btn-primary {
@@ -429,3 +429,13 @@ form select {
     gap: 12px;
   }
 }
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+      .navbar {
+        flex-direction: column;
+        gap: 12px;
+      }
+    }

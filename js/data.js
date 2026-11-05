@@ -15,7 +15,7 @@ const challenges = [
     "sport": "Musculation",
     "description": "Réaliser 100 pompes chaque jour pendant une semaine complète.",
     "goalValue": 700,
-    "deadline": "2027-11-05",
+    "deadline": "2026-11-05",
     "status": "Active",
     "imageUrl": "assets/images/musculation.png"
   },
@@ -25,7 +25,7 @@ const challenges = [
     "sport": "Cyclisme",
     "description": "Parcourir 150 kilomètres à vélo sur des parcours en extérieur.",
     "goalValue": 150,
-    "deadline": "2027-11-25",
+    "deadline": "2026-11-25",
     "status": "Active",
     "imageUrl": "assets/images/cyclisme.png"
   },
@@ -45,7 +45,7 @@ const challenges = [
     "sport": "Natation",
     "description": "Nager une distance cumulée de 10 kilomètres en piscine.",
     "goalValue": 10,
-    "deadline": "2027-11-20",
+    "deadline": "2026-11-20",
     "status": "Active",
     "imageUrl": "assets/images/natation.png"
   },
@@ -55,7 +55,7 @@ const challenges = [
     "sport": "Fitness",
     "description": "Compléter 10 routines d'entraînements à haute intensité (HIIT).",
     "goalValue": 10,
-    "deadline": "2027-11-15",
+    "deadline": "2026-11-15",
     "status": "Active",
     "imageUrl": "assets/images/fitness.png"
   },
@@ -75,7 +75,7 @@ const challenges = [
     "sport": "Musculation",
     "description": "Accumuler un total de 500 répétitions de squats.",
     "goalValue": 500,
-    "deadline": "2027-11-28",
+    "deadline": "2026-11-28",
     "status": "Active",
     "imageUrl": "assets/images/musculation.png"
   },
@@ -85,7 +85,7 @@ const challenges = [
     "sport": "Course à pied",
     "description": "Courir 100 km pour se préparer pour le prochain semi-marathon.",
     "goalValue": 100,
-    "deadline": "2027-12-05",
+    "deadline": "2026-12-05",
     "status": "Active",
     "imageUrl": "assets/images/running.png"
   },
@@ -95,7 +95,7 @@ const challenges = [
     "sport": "Fitness",
     "description": "Accumuler un temps total de 60 minutes de planche/gainage.",
     "goalValue": 60,
-    "deadline": "2027-11-18",
+    "deadline": "2026-11-18",
     "status": "Completed",
     "imageUrl": "assets/images/fitness.png"
   }
@@ -105,8 +105,8 @@ const challenges = [
 const participants = [
   {
     "id": "pa_101",
-    "name": "Zakaria Afifi",
-    "pseudo": "zakFit",
+    "name": "Amine Moli",
+    "pseudo": "aminmol",
     "challengeIds": [
       "ch_101",
       "ch_125"
