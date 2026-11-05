@@ -9,7 +9,6 @@
 </head>
 
 <body>
-
   <div class="dashboard-container">
 
     <nav class="navbar">
@@ -17,7 +16,7 @@
       <div class="nav-links">
         <a href="index.html" class="nav-link">Dashboard</a>
         <a href="challenger.html" class="nav-link">Challenges</a>
-        <a href="#" class="nav-link">Participants</a>
+        <a href="participants.html" class="nav-link">Participants</a>
         <a href="#" class="nav-link">Leaderboard</a>
       </div>
     </nav>
@@ -33,26 +32,22 @@
       <h2 class="banner-title">FIVE DAYS.<br>MAKE THEM COUNT.</h2>
     </section>
 
-    <section class="affichagesection">
-
-        <div class="stat-challenges">
-            <div class="stat-header"><span>Total Challenges</span></div>
-            <div class="stat-number">06</div>
-            <div class="stat-footer">Across 4 sports</div>
-        </div>
-
-        <div class="stat-participant">
-            <div class="stat-header"><span>Active Participants</span></div>
-            <div class="stat-number">06</div>
-            <div class="stat-footer">Your club is moving</div>
-        </div>
-
-        <div class="stat-activeChallenges">
-            <div class="stat-header"><span>Active Challenges</span></div>
-            <div class="stat-number">04</div>
-            <div class="stat-footer">2 completed</div>
-        </div>
-
+    <section class="grid-3">
+      <div class="stat-card">
+        <div class="stat-header"><span>Total Challenges</span><span></span></div>
+        <div class="stat-number"></div>
+        <div class="stat-footer"></div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-header"><span>Active Participants</span><span></span></div>
+        <div class="stat-number" id="partnumber"></div>
+        <div class="stat-footer">Your club is moving</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-header"><span>Active Challenges</span><span></span></div>
+        <div class="stat-number" id="activechal"></div>
+        <div class="stat-footer" id="cpmletedchal"></div>
+      </div>
     </section>
 
     <section class="grid-3" id="challengearticle">
@@ -89,56 +84,7 @@
   </div>
 
   <script src="js/data.js"></script>
-  <script src="js/app.js"></script>
-  <script>
-
-    let totalchaltxt = document.querySelector(".stat-number");
-    let totalchallenge = challenges.length;
-    totalchaltxt.textContent = totalchallenge;
-
-
-    let totalsportxt = document.querySelector(".stat-footer");
-    let sportnumber = new Set(challenges.map(challenge => challenge.sport)).size;
-    totalsportxt.textContent = `Across ${sportnumber} sports`;
-
-
-    let parnumber = document.getElementById("partnumber");
-    let totalpartic = participants.length;
-    parnumber.textContent = totalpartic;
-
-
-    let activchal = document.getElementById("activechal");
-    let activechalenge = new Set(challenges.filter(challenge => challenge.status == "actif")).size;
-    activchal.textContent = activechalenge;
-
-    let completedchaltxt = document.getElementById("cpmletedchal");
-    let completedchalenge = new Set(challenges.filter(challenge => challenge.status == "inactif")).size;
-    completedchaltxt.textContent = ` ${completedchalenge} Completed`;
-
-    
-const challengearticles = document.querySelector("#challengearticle");
-for (let i = 5; i < 8; i++) {
-   challengearticles.innerHTML+= ` 
-    <article class="activity-card">
-          <div class="card-img-container">
-          <img src="${challenges[i].imageUrl}" alt="${challenges[i].title}" class="card-img">
-        </div>
-        <div class="card-body">
-          <h3 class="activity-title">${challenges[i].title}</h3>
-          <div class="activity-subtitle">${challenges[i].description}</div>
-          <div class="progress-container">
-            <div class="progress-info">
-              <span> • ${challenges[i].status}</span>
-            </div>
-          </div>
-          <div class="card-actions">
-            <button class="btn btn-primary">View challenge</button>
-            <button class="btn btn-secondary"> Edit</button>
-          </div>
-        </div> 
-        </article>`
- }
-  </script>
+  <script src="js/index.js"></script>
 
 </body>
 

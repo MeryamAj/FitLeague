@@ -1,4 +1,3 @@
-/* Global Styles & Variables */
 :root {
   --bg-dark: #0f1110;
   --card-bg: #161817;
@@ -264,7 +263,7 @@
   cursor: pointer;
   border: none;
   flex: 1;
-  text-align: center;
+  text-align: center; 
 }
 
 .btn-primary {
@@ -350,13 +349,256 @@
   color: var(--text-muted);
 }
 
-    /* Responsive Adjustments */
-    @media (max-width: 768px) {
-      .grid-3 {
-        grid-template-columns: 1fr;
-      }
-      .navbar {
-        flex-direction: column;
-        gap: 12px;
-      }
-    }
+
+
+
+/* participant css */
+.hero-banner {
+    flex: 1;
+    min-width: 280px;
+}
+
+.buttones {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+}
+
+.buttones button {
+    background-color: #b3f35b;
+    color: #17200e;
+    border: none;
+    border-radius: 9px;
+    padding: 11px 16px;
+    font-size: 11px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+
+
+#search_b {
+    width: 100%;
+    margin-top: 10px;
+}
+
+#search_p {
+    width: 100%;
+    height: 43px;
+    background-color: #161d18;
+    border: 1px solid #29332c;
+    border-radius: 9px;
+    padding: 0 15px;
+    color: white;
+    font-size: 11px;
+    outline: none;
+}
+
+#search_p::placeholder {
+    color: #939b93;
+}
+
+#search_p:focus {
+    border-color: #b3f35b;
+}
+
+
+.tabl {
+    background-color: #141c17;
+    border: 1px solid #ecf4ee;
+    border-radius: 13px;
+    overflow: hidden;
+    width: 100%;
+}
+
+
+
+.part1 {
+    background-color: #18211b;
+    min-height: 49px;
+    display: flex;
+    align-items: center;
+    padding: 0 18px;
+    color: #a5aea4;
+    font-size: 8px;
+    font-weight: 600;
+    border-bottom: 1px solid #e3ece6;
+}
+
+
+
+.card1 {
+    display: flex;
+    align-items: center;
+    min-height: 75px;
+    padding: 12px 18px;
+    margin: 0;
+    border-bottom: 1px solid rgba(36, 188, 36, 0.533);
+    background-color: #262827;
+    /* transition: background-color 0.2s; */
+}
+
+.card1:hover {
+    background-color: #19231c;
+}
+
+.card1:last-child {
+    border-bottom: none;
+}
+
+
+.card1name {
+    color: #edf0eb;
+    font-size: 11px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.you {
+    color: #c3c9c1;
+    margin-left: 3px;
+}
+
+.card1pp {
+    color: #8d978d;
+    font-size: 9px;
+}
+
+
+.enrolled {
+    display: inline-block;
+    background-color: #3a3c3b;
+    color: #a0aaa0;
+    padding: 5px 8px;
+    border-radius: 5px;
+    font-size: 9px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+.enrolled.main {
+    background-color: #273d1c;
+    color: #b3f35b;
+}
+
+.active {
+    display: block;
+    color: #738075;
+    font-size: 9px;
+    margin-top: 5px;
+}
+
+.km {
+    color: #f0f3ed;
+    font-size: 10px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.progress {
+    width: 78px;
+    height: 5px;
+    background-color: #303b32;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress .dd {
+    height: 100%;
+    background-color: #b3f35b;
+    border-radius: 10px;
+}
+.btn-outline-fl {
+  background: transparent;
+  color: #fff;
+  border: 1px solid var(--card-border);
+  border-radius: 6px;
+  padding: 5px 12px;
+  font-size: 0.7rem;
+  cursor: pointer;
+}
+.btn-outline-fl:hover { color: var(--accent-green); border-color: var(--accent-green); }
+
+
+
+
+.afichagemodal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-div {
+  background-color: #1a2318;
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 550px;
+  max-height: 700px;
+  overflow-y: auto;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.fermer-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+
+form label {
+  font-weight: 600;
+  font-size: 14px;
+  color: #918989;
+  margin-bottom: -4px;
+}
+
+
+form input,
+form select {
+  padding: 10px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  outline: none;
+  background-color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+
+}
+
+.btn:hover {
+  transform: scale(1.03);
+  background-color: #80c04f;
+}
+
+
+@media (max-width: 768px) {
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+    
