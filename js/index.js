@@ -23,7 +23,7 @@
 
     
 const challengearticles = document.querySelector("#challengearticle");
-for (let i =15; i < 18; i++) {
+for (let i =1; i <4; i++) {
    challengearticles.innerHTML+= ` 
     <article class="activity-card">
           <div class="card-img-container">
