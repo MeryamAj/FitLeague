@@ -22,10 +22,33 @@
 // completedchaltxt.textContent = ` ${completedchalenge} Completed`;
 
 
+const challenge_articles =document.querySelector("#challengsection");
+challenges.forEach((idchal) => {
+challenge_articles.innerHTML+= ` 
+<article class="activity-card">
+          <div class="card-img-container">
+          <img src="${idchal.imageUrl}" alt="${idchal.title}" class="card-img">
+        </div>
+        <div class="card-body">
+          <h3 class="activity-title">${idchal.title}</h3>
+          <div class="activity-subtitle">${idchal.description}</div>
+          <div class="progress-container">
+            <div class="progress-info">
+              <span> • ${idchal.status}</span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <button class="btn btn-primary">View challenge</button>
+            <button class="btn btn-secondary"> Edit</button>
+          </div>
+        </div> 
+        </article>`
+});
+
 
 // const challengearticles = document.querySelector("#challengearticle");
 // for (let i = 5; i < 8; i++) {
-//    challengearticles.innerHTML+= `
+//    challengearticles.innerHTML+= ` 
 //     <article class="activity-card">
 //           <div class="card-img-container">
 //           <img src="${challenges[i].imageUrl}" alt="${challenges[i].title}" class="card-img">
@@ -42,7 +65,7 @@
 //             <button class="btn btn-primary">View challenge</button>
 //             <button class="btn btn-secondary"> Edit</button>
 //           </div>
-//         </div>
+//         </div> 
 //         </article>`
 //  }
 

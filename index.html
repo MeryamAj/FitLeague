@@ -9,6 +9,7 @@
 </head>
 
 <body>
+
   <div class="dashboard-container">
 
     <nav class="navbar">
@@ -32,22 +33,26 @@
       <h2 class="banner-title">FIVE DAYS.<br>MAKE THEM COUNT.</h2>
     </section>
 
-    <section class="grid-3">
-      <div class="stat-card">
-        <div class="stat-header"><span>Total Challenges</span><span></span></div>
-        <div class="stat-number"></div>
-        <div class="stat-footer"></div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-header"><span>Active Participants</span><span></span></div>
-        <div class="stat-number" id="partnumber"></div>
-        <div class="stat-footer">Your club is moving</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-header"><span>Active Challenges</span><span></span></div>
-        <div class="stat-number" id="activechal"></div>
-        <div class="stat-footer" id="cpmletedchal"></div>
-      </div>
+    <section class="affichagesection">
+
+        <div class="stat-challenges">
+            <div class="stat-header"><span>Total Challenges</span></div>
+            <div class="stat-number">06</div>
+            <div class="stat-footer">Across 4 sports</div>
+        </div>
+
+        <div class="stat-participant">
+            <div class="stat-header"><span>Active Participants</span></div>
+            <div class="stat-number">06</div>
+            <div class="stat-footer">Your club is moving</div>
+        </div>
+
+        <div class="stat-activeChallenges">
+            <div class="stat-header"><span>Active Challenges</span></div>
+            <div class="stat-number">04</div>
+            <div class="stat-footer">2 completed</div>
+        </div>
+
     </section>
 
     <section class="grid-3" id="challengearticle">
@@ -104,16 +109,16 @@
 
 
     let activchal = document.getElementById("activechal");
-    let activechalenge = new Set(challenges.filter(challenge => challenge.status == "Active")).size;
+    let activechalenge = new Set(challenges.filter(challenge => challenge.status == "actif")).size;
     activchal.textContent = activechalenge;
 
     let completedchaltxt = document.getElementById("cpmletedchal");
-    let completedchalenge = new Set(challenges.filter(challenge => challenge.status == "Completed")).size;
+    let completedchalenge = new Set(challenges.filter(challenge => challenge.status == "inactif")).size;
     completedchaltxt.textContent = ` ${completedchalenge} Completed`;
 
     
 const challengearticles = document.querySelector("#challengearticle");
-for (let i =15; i < 18; i++) {
+for (let i = 5; i < 8; i++) {
    challengearticles.innerHTML+= ` 
     <article class="activity-card">
           <div class="card-img-container">
@@ -122,15 +127,14 @@ for (let i =15; i < 18; i++) {
         <div class="card-body">
           <h3 class="activity-title">${challenges[i].title}</h3>
           <div class="activity-subtitle">${challenges[i].description}</div>
-          <div class="activity-subtitle">Deadline : ${challenges[i].deadline}</div>
           <div class="progress-container">
             <div class="progress-info">
               <span> • ${challenges[i].status}</span>
             </div>
           </div>
           <div class="card-actions">
-            <button class="btn btn-primary">Update</button>
-            <button class="btn btn-primary">Delete</button>
+            <button class="btn btn-primary">View challenge</button>
+            <button class="btn btn-secondary"> Edit</button>
           </div>
         </div> 
         </article>`
