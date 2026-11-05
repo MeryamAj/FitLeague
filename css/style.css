@@ -350,6 +350,86 @@
   color: var(--text-muted);
 }
 
+
+.afichagemodal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.modal-div {
+  background-color: #1a2318;
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 550px;
+  max-height: 700px;
+  overflow-y: auto;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.fermer-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+
+form label {
+  font-weight: 600;
+  font-size: 14px;
+  color: #918989;
+  margin-bottom: -4px;
+}
+
+
+form input,
+form select {
+  padding: 10px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  outline: none;
+  background-color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+
+}
+
+.btn:hover {
+  transform: scale(1.03);
+  background-color: #80c04f;
+}
+
+
+@media (max-width: 768px) {
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
     /* Responsive Adjustments */
     @media (max-width: 768px) {
       .grid-3 {

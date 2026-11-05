@@ -31,87 +31,21 @@
           </div>
           <div class="search">
             <div id="search_b">
-              <input type="text" id="searchChalinput" placeholder="Search by Id">
+              <input type="text" id="searchChalinput" placeholder="Search by challenge name">
               <button class="btn btn-primary" id="searchChalBtn">Search</button>
             </div>
             <span id="searchnotfound" class="subtitle-date"></span>
             <div>
               <button class="btn btn-primary" id="challengecreate">+ Create challenge</button>
-              <button class="btn btn-primary" id="challengeupdate">Update challenge</button>
-               <button class="btn btn-primary" id="challengedelete">Delete challenge</button>
             </div>
           </div>
         </div>
 
         <div id="createchallenge" class="afichagemodal">
-          <div class="modal-div">
-            <span class="fermer-btn" id="createclosebtn">&times;</span>
-            <form action="">
-              <h1>Create Challenge</h1>
-              <span id="createchallengespan"></span>
-              <label for="challenge_id">Challenge ID*</label>
-              <input type="text" name="challenge_id" id="createchallengeid">
-              <label for="challenge_name">Challenge name *</label>
-              <input type="text" name="challenge_name"  id="createchallengetitle">
-              <label for="Description">Description</label>
-              <input type="text" name="Description" id="createchallengedescription">
-              <label for="sport">Sport*</label>
-              <input type="text" name="sport" id="createchallengesport">
-              <label for="" >Status</label>
-              <select id="createchallengestatus">
-                <option value="active">Active</option>
-                <option value="completed" selected>Completed</option>
-              </select>
-              <label for="Objectif">Objectif*</label>
-              <input type="number" name="Objectif" id="createchallengeobjectif">
-              <label for="Deadline">Deadline</label>
-              <input type="date" name="Deadline" id="createchallengedate">
-              <button type="submit" id="createchallengebtn" class="btn btn-primary">Creat challenge</button>
-            </form>
-          </div>
-        </div>
+          
 
-        <div id="updatechallenge" class="afichagemodal">
-          <div class="modal-div">
-            <span class="fermer-btn" id="updateclosebtn">&times;</span>
-            <form action="">
-              <h1>Update Challenge</h1>
-              <span id="updatechallengespan"></span>
-              <label for="challenge_id">Challenge ID*</label>
-              <input type="text" name="challenge_id">
-              <label for="challenge_name">Challenge name *</label>
-              <input type="text" name="challenge_name">
-              <label for="Description">Description</label>
-              <input type="text" name="Description">
-              <label for="sport">Sport*</label>
-              <input type="text" name="sport" id="">
-              <label for="">Status</label>
-              <select>
-                <option value="active">Active</option>
-                <option value="completed" selected>Completed</option>
-              </select>
-              <label for="Objectif">Objectif*</label>
-              <input type="number" name="Objectif">
-              <label for="Deadline">Deadline</label>
-              <input type="date" name="Deadline">
-              <button type="submit" id="updatechallengebtn" class="btn btn-primary" >update challenge</button>
-            </form>
-          </div>
         </div>
-
-        <div id="deletechallenge" class="afichagemodal">
-          <div class="modal-div">
-            <span class="fermer-btn" id="deleteclosebtn">&times;</span>
-            <form action="">
-              <h1>Delete Challenge</h1>
-              <span id="deletechallengespan"></span>
-              <label for="challenge_id">Challenge ID*</label>
-              <input type="text" name="challenge_id">
-              <button type="submit" id="deletechallengebtn" class="btn btn-primary">Delete challenge</button>
-            </form>
-          </div>
-        </div>
-
+     
       </div>
     </header>
     <section class="grid-3" id="challengsection">

@@ -5,8 +5,8 @@ const challenges = [
     "sport": "Course à pied",
     "description": "Courir une distance totale de 50 km avant la fin du mois.",
     "goalValue": 50,
-    "deadline": "2026-11-30",
-    "status": "inactif",
+    "deadline": "2027-11-30",
+    "status": "Completed",
     "imageUrl": "Assets/images/running.png"
   },
   {
@@ -35,8 +35,8 @@ const challenges = [
     "sport": "Yoga",
     "description": "Pratiquer 20 minutes de séances de yoga réparateur chaque matin.",
     "goalValue": 300,
-    "deadline": "2026-11-30",
-    "status": "inactif",
+    "deadline": "2027-11-30",
+    "status": "Completed",
     "imageUrl": "assets/images/yoga.png"
   },
   {
