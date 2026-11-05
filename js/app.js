@@ -1,75 +1,3 @@
-// let totalchaltxt = document.querySelector(".stat-number");
-// let totalchallenge = challenges.length;
-// totalchaltxt.textContent = totalchallenge;
-
-
-// let totalsportxt = document.querySelector(".stat-footer");
-// let sportnumber = new Set(challenges.map(challenge => challenge.sport)).size;
-// totalsportxt.textContent = `Across ${sportnumber} sports`;
-
-
-// let parnumber = document.getElementById("partnumber");
-// let totalpartic = participants.length;
-// parnumber.textContent = totalpartic;
-
-
-// let activchal = document.getElementById("activechal");
-// let activechalenge = new Set(challenges.filter(challenge => challenge.status == "actif")).size;
-// activchal.textContent = activechalenge;
-
-// let completedchaltxt = document.getElementById("cpmletedchal");
-// let completedchalenge = new Set(challenges.filter(challenge => challenge.status == "inactif")).size;
-// completedchaltxt.textContent = ` ${completedchalenge} Completed`;
-
-
-const challenge_articles =document.querySelector("#challengsection");
-challenges.forEach((idchal) => {
-challenge_articles.innerHTML+= ` 
-<article class="activity-card">
-          <div class="card-img-container">
-          <img src="${idchal.imageUrl}" alt="${idchal.title}" class="card-img">
-        </div>
-        <div class="card-body">
-          <h3 class="activity-title">${idchal.title}</h3>
-          <div class="activity-subtitle">${idchal.description}</div>
-          <div class="progress-container">
-            <div class="progress-info">
-              <span> • ${idchal.status}</span>
-            </div>
-          </div>
-          <div class="card-actions">
-            <button class="btn btn-primary">View challenge</button>
-            <button class="btn btn-secondary"> Edit</button>
-          </div>
-        </div> 
-        </article>`
-});
-
-
-// const challengearticles = document.querySelector("#challengearticle");
-// for (let i = 5; i < 8; i++) {
-//    challengearticles.innerHTML+= ` 
-//     <article class="activity-card">
-//           <div class="card-img-container">
-//           <img src="${challenges[i].imageUrl}" alt="${challenges[i].title}" class="card-img">
-//         </div>
-//         <div class="card-body">
-//           <h3 class="activity-title">${challenges[i].title}</h3>
-//           <div class="activity-subtitle">${challenges[i].description}</div>
-//           <div class="progress-container">
-//             <div class="progress-info">
-//               <span> • ${challenges[i].status}</span>
-//             </div>
-//           </div>
-//           <div class="card-actions">
-//             <button class="btn btn-primary">View challenge</button>
-//             <button class="btn btn-secondary"> Edit</button>
-//           </div>
-//         </div> 
-//         </article>`
-//  }
-
-
 let compteur = 100;
 
 const createrId = () => {
@@ -149,8 +77,6 @@ challenges.forEach((idchal) => {
 });
 
 
-
-
 const challengecreatebtn = document.getElementById("challengecreate");
 const createform = document.getElementById("createchallenge");
 
@@ -218,11 +144,14 @@ challengecreatebtn.addEventListener("click", () => {
 challenge_articles.addEventListener("click", (e) => {
   const challengeId = e.target.getAttribute("data-id");
   const challengeedittarget = challenges.find((ch) => ch.id == challengeId);
-  
+  // console.log(challengeedittarget);
+
+
+
   if (e.target.classList.contains("challengeupdate")) {
     if (challengeedittarget) {
       createform.innerHTML = `
-   <div class="modal-div">
+       <div class="modal-div">
             <span class="fermer-btn" id="createclosebtn">&times;</span>
             <form action="">
               <span id="createchallengespan"></span>
@@ -259,66 +188,44 @@ challenge_articles.addEventListener("click", (e) => {
 
       createform.style.display = "flex";
     }
+
+    const updatechallengebtn = document.getElementById("updatechallengebtn");
+
+    updatechallengebtn.addEventListener("click", (e) => {
+      const challengeedittarget = challenges.find((challenge) => challenge.id == challengeId);
+      const challengetargetid = challenges.findIndex(challenge => challenge.id == challengeId);
+      let msgs = document.getElementById("createchallengespan")
+      e.preventDefault()
+      if (challengeedittarget) {
+        challenges[challengetargetid] =
+        {
+          "id": challengeedittarget.id,
+          "title": createchallengetitle.value,
+          "sport": createchallengesport.value,
+          "description": createchallengedescription.value,
+          "goalValue": createchallengeobjectif.value,
+          "deadline": createchallengedate.value,
+          "status": createchallengestatus.value
+        }
+        msgs.textContent = "Challenge updated successfully";
+
+      }
+    });
   }
 
+  if (e.target.classList.contains("challengedelete")) {
+    const deletechallengebtn = document.querySelector(".challengedelete")
+    const challengedeletedId = e.target.getAttribute("data-id");
+    const challengedeletedtarg = challenges.find(challenge => challenge.id === challengedeletedId)
+    const deletedchallengeindex = challenges.findIndex(challenge => challenge.id == challengedeletedId)
 
-  const updatechallengebtn = document.getElementById("updatechallengebtn");
-
-  updatechallengebtn.addEventListener("click", (e) => {
-    const challengeedittarget = challenges.find((challenge) => challenge.id == challengeId);
-    const challengetargetid = challenges.findIndex(challenge => challenge.id == challengeId);
-    let msgs = document.getElementById("createchallengespan")
-    e.preventDefault()
-    if (challengeedittarget) {
-      challenges[challengetargetid] =
-      {
-        "id": challengeedittarget.id,
-        "title": createchallengetitle.value,
-        "sport": createchallengesport.value,
-        "description": createchallengedescription.value,
-        "goalValue": createchallengeobjectif.value,
-        "deadline": createchallengedate.value,
-        "status": createchallengestatus.value
-      }
-      msgs.textContent = "Challenge updated successfully";
-
+    if (deletedchallengeindex != -1) {
+      challenges.splice(deletedchallengeindex, 1);
     }
-  });
-
-
-  // const deletechallengebtn = document.querySelector(".challengedelete")
-
-  // deletechallengebtn.addEventListener("click", (e) => {
-  //  const deletedchallengeindex = challenges.findIndex(challenge => challenge.id == challengeId)
-
-  //   console.log(deletedchallengeindex)
-
-  //   if (deletedchallengeindex != -1) {
-  //     challenges.splice(challengetargetid, 1);
-  //   }
-  // });
-
+  }
 });
 
 
-// challenge_articles.addEventListener("click", (e) => {
-
-//   const selectedchallengeid = e.target.getAttribute("data-id");
-//   const deletedchallengeid = challenges.find(challenge => selectedchallengeid == challenge.id)
-//   const deletedchallengeindex = challenges.findIndex(challenge => challenge.id == deletedchallengeid)
-
-//   const deletechallengebtn = document.querySelector(".challengedelete")
-
-//   deletechallengebtn.addEventListener("click", (e) => {
-//       console.log(selectedchallengeid)
-//       console.log("deletedchallengeindex")
-
-//       if (deletedchallengeindex != -1) {
-//         challenges.splice(deletedchallengeindex, 1);
-//       }
-//   });
-
-// });
 
 
 
